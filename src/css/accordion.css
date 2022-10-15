@@ -1,0 +1,128 @@
+.accordion-list {
+   width: 100%;
+}
+
+.accordion-list > li {
+   width: 100%;
+   position: relative;
+}
+
+
+
+
+
+.accordion-list > li > a {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 29px;
+   user-select: none;
+   cursor: pointer;
+   color: var(--dark, #333333);
+   position: relative;
+}
+
+.accordion-list > li > a::before {
+   content: '';
+   margin-top: -6px;
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   right: 0;
+   top: 50%;
+   background: url('../img/dist/icons/icon-menu-arrow.svg') no-repeat center;
+   background-size: contain;
+   transform: rotate(-90deg);
+   transition: all 0.2s ease-out;
+}
+
+.accordion-list > li.active > a::before {
+   transform: rotate(0);
+}
+
+.accordion-list > li > a > img {
+   width: 52px;
+}
+
+
+
+
+
+
+
+.accordion-list__1 {
+   padding-left: 52px;
+}
+
+.accordion-list__1 > li {
+   margin-bottom: 10px;
+}
+
+.accordion-list__1 > li > a {
+   user-select: none;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 130%;
+   display: inline-block;
+   cursor: pointer;
+   color: var(--lighter-dark, #666666);
+   transition: all 0.2s ease-out;
+}
+
+.accordion-list__1 > li > a:hover {
+   color: var(--section-blue, #02A0FC);
+   transform: translateX(5px);
+}
+
+
+
+
+
+
+/* accordion-category */
+.accordion-category-list > li {
+   border-bottom: 1px solid var(--section-grey2, #7E8084);
+}
+
+.accordion-category-list > li:first-child {
+   border-top: 1px solid var(--section-grey2, #7E8084);
+}
+
+.accordion-category-list > li > a {
+   padding: 7px 0;
+   position: relative;
+}
+
+
+
+
+
+
+/* media queries */
+@media all and (max-width: 1170px) {
+   .accordion-category-list > li > a { 
+      padding-top: calc((100vw - 840px)/(1170 - 840) * (7 - 1) + 1px);
+      padding-bottom: calc((100vw - 840px)/(1170 - 840) * (7 - 1) + 1px);
+      font-size: calc((100vw - 840px)/(1170 - 840) * (24 - 17) + 17px); 
+   }
+   .accordion-category-list > li > a > img { width: calc((100vw - 840px)/(1170 - 840) * (52 - 41) + 41px); }
+}
+
+@media all and (max-width: 840px) {
+   .accordion-category-list > li > a { 
+      padding: 7px 0;
+      font-size: 24px; 
+   }
+   .accordion-category-list > li > a > img { width: 52px; }
+}
+
+@media all and (max-width: 340px) {
+   .accordion-category-list > li > a { 
+      padding-top: calc((100vw - 280px)/(340 - 280) * (7 - 3) + 3px);
+      padding-bottom: calc((100vw - 280px)/(340 - 280) * (7 - 3) + 3px);
+      font-size: calc((100vw - 280px)/(340 - 280) * (24 - 21) + 21px); 
+   }
+   .accordion-category-list > li > a > img { width: calc((100vw - 280px)/(340 - 280) * (52 - 47) + 47px); }
+}

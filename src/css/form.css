@@ -1,0 +1,103 @@
+#form {
+   margin-right: 33px;
+   width: 100%;
+}
+
+.form-item {
+   margin-bottom: 22px;
+   position: relative;
+   width: 100%;
+   flex: 1 1 auto;
+}
+
+.submit-item {
+   margin-top: 31px;
+   margin-bottom: 40px;
+}
+
+
+.form-item input, .form-item textarea {
+   padding: 5px 15px;
+   background: var(--section-white, #fff);
+   border: 1px solid var(--section-white, #fff);
+   border-radius: 8px;
+   width: 100%;
+   min-height: 58px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 36px;
+   letter-spacing: -0.4px;
+   color: var(--section-grey, #999);
+   transition: all 0.2s ease-out;
+}
+
+.form-item.search-form-item input {
+   min-height: 40px;
+   font-size: 18px;
+   color: var(--dark, #333);
+}
+
+.form-item textarea {
+   padding: 7px 15px;
+   min-height: 100px;
+}
+
+.form-item input::placeholder,
+.form-item textarea::placeholder {
+   color: var(--dark, #333);
+}
+
+.form-item input:focus, 
+.form-item textarea:focus {
+   border: 1px solid var(--section-blue, #02A0FC);
+}
+
+.form-item.error input, 
+.form-item.error textarea {
+   border: 1px solid var(--error, #ed1b24);
+   color: var(--error, #ed1b24);
+   background: #fdd0d3;
+}
+
+.form-item.error input::placeholder,
+.form-item.error textarea::placeholder {
+   color: var(--error, #ed1b24);
+}
+
+
+
+/* message */
+.form-item .message {
+   margin-top: 2px;
+   position: absolute;
+   width: 100%;
+   left: -8px;
+   top: 102%;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 80%;
+   color: var(--error, #ed1b24);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.2s ease-out;
+}
+
+.form-item.error .message {
+   left: 0;
+   opacity: 1;
+   visibility: visible;
+}
+
+
+
+@media all and (max-width: 650px) {
+   #form { margin-right: 0; }
+}
+
+@media all and (max-width: 410px) {
+   .form-item { margin-bottom: 30px; }
+   .submit-item { margin-top: 40px; }
+}

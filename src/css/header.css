@@ -1,0 +1,152 @@
+header {
+   padding: 13px 0;
+   background: var(--section-white, #fff);
+   width: 100%;
+}
+
+.header-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo {
+   max-width: 220px;
+}
+.logo img {
+   max-width: 100%;
+   height: auto;
+}
+
+
+
+.menu-wrap {
+   display: flex;
+   align-items: center;
+}
+
+/* меню */
+.header-menu {
+   display: flex;
+   align-items: center;
+}
+
+.header-menu > li {
+   padding: 5px 0;
+   position: relative;
+}
+
+.header-menu > li.has-children svg {
+   width: 10px;
+   height: 7px;
+   fill: var(--lighter-dark, #666666);
+   transition: all 0.2s ease-out;
+}
+
+.header-menu > li.has-children:hover svg {
+   transform: rotate(-180deg);
+   fill: var(--section-blue, #02A0FC);
+}
+
+.header-menu > li {
+   padding: 0 15px;
+}
+
+.header-menu > li > a {
+   padding: 3px 5px;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 22px;
+   color: #333333;
+   position: relative;
+}
+
+.header-menu > li > a::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 0;
+   height: 2px;
+   background: var(--section-blue, #02A0FC);
+   transition: all 0.2s ease-out;
+}
+
+.header-menu > li:hover > a {
+   color: var(--section-blue, #02A0FC);
+}
+
+.header-menu > li:hover > a::after {
+   width: 100%;
+}
+
+
+
+
+
+
+/* social */
+.social {
+   margin-right: 40px;
+   display: flex;
+   align-items: center;
+}
+
+.social a {
+   display: inline-block;
+   line-height: 0;
+}
+
+.social a:not(:last-child) {
+   margin-right: 19px;
+}
+
+.social svg {
+   width: 22px;
+   height: 20px;
+   fill: var(--section-grey, #999999);
+   transition: all 0.2s ease-out;
+}
+.social a:hover svg {
+   fill: var(--section-blue, #02A0FC);
+}
+
+
+
+/* search */
+.search-block {
+   position: relative;
+   line-height: 0;
+}
+
+.search-block a {
+   line-height: 0;
+   display: inline-block;
+}
+
+.search-block svg {
+   fill: var(--section-blue, #02A0FC);
+   width: 19px;
+   height: 19px;
+   transition: all 0.2s ease-out;
+}
+
+.search-block a:hover svg {
+   fill: var(--section-blue, #02A0FC);
+}
+
+
+
+
+
+@media all and (max-width: 1060px) {
+   .header-menu > li { padding: 0 5px; }
+   /* .languages { margin: 0 20px; }
+   .social { margin-right: 20px; } */
+}
+
+@media all and (max-width: 992px) {
+   .menu-wrap { display: none; }
+}
+

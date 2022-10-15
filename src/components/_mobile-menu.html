@@ -1,0 +1,31 @@
+<nav class="mobile-menu">
+   <div class="mobile-menu-content">
+      <div class="mobile-menu-head">
+         <div class="logo"><a href=""><img src="img/dist/logo/logo-blue.png" alt="Logo"></a></div>
+         <div class="close-btn"><svg><use xlink:href="img/dist/svg-sprite.svg#icon-close"></use></svg></div>
+      </div>
+
+      <div class="mobile-lang">
+         @@include('_languages.html')
+      </div>
+
+      <ul class="mobile-menu-list">
+         <li>
+            <a class="has-children hover-link">Каталог</a>
+            @@include('_accordion-mobile-menu.html')
+         </li>
+         <li><a class="hover-link" href="">Инфо о доставке</a></li>
+         <li><a class="hover-link" href="">О нас</a></li>
+         <li><a class="hover-link" href="">Контакты</a></li>
+      </ul>
+      
+      <div class="social mobile-social">
+         <a href=""><svg><use xlink:href="img/dist/svg-sprite.svg#icon-facebook"></use></svg></a>
+         <a href=""><svg><use xlink:href="img/dist/svg-sprite.svg#icon-instagram"></use></svg></a>
+      </div>
+
+      @@include('_search-small-form.html')
+   </div>
+</nav>
+
+

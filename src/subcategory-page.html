@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content= />
+      <meta name="author" content= />
+      <!-- <link rel="stylesheet" href="css/animate.min.css">
+      <link rel="stylesheet" href="css/hover-min.css"> -->
+      <link rel="stylesheet" href="lib/bootstrap-grid.min.css">
+      <link rel="stylesheet" href="lib/slick/slick.css">
+      <link rel="stylesheet" href="lib/slick/slick-theme.css">
+      <link rel="stylesheet" href="lib/fonts.css">
+      <link rel="stylesheet" href="css/style.min.css">
+      <title>SubСategory</title>
+   </head>
+
+   <body>
+      @@include('components/_preloader.html')
+      @@include('components/_header.html')
+
+      <section class="section-category">
+         <div class="container-fluid">
+            <div class="row category-row">
+               <div class="col-3 section-category-col accordion-col">
+                  @@include('components/_accordion-category.html')
+               </div>
+               <div class="col-9 section-category-col products-col">
+                  <div class="breadcrumbs mb10">
+                     <a href="/" class="link"><svg><use xlink:href="img/dist/svg-sprite.svg#icon-home"></use></svg><span>/</span></a>
+                     <strong class="link">Комбинезоны</strong>
+                  </div>
+                  <h2 class="medium-title category-title">Комбинезоны</h2>
+                  @@include('components/_cards-list.html')
+                  @@include('components/_pagination.html')
+               </div>
+            </div>
+         </div>
+      </section>
+
+      @@include('components/_contact.html')
+      @@include('components/_footer.html')
+
+      @@include('components/_mobile-menu.html')
+      <div class="overlay"></div>
+
+
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <!-- <script src="lib/jQuery-1.12.4.min.js"></script> -->
+      <script src="lib/slick/slick.min.js"></script>
+      <script src="js/script.min.js"></script>
+   </body>
+</html>

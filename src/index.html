@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content= />
+        <meta name="author" content= />
+        <!-- <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/hover-min.css"> -->
+        <link rel="stylesheet" href="lib/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="lib/slick/slick.css">
+        <link rel="stylesheet" href="lib/slick/slick-theme.css">
+        <link rel="stylesheet" href="lib/fonts.css">
+        <link rel="stylesheet" href="css/style.min.css">
+        <title>IntegraWay</title>
+    </head>
+    <body>
+        @@include('components/_preloader.html')
+        @@include('components/_header.html')
+
+        <section class="section-main">
+            <div class="container-fluid">
+                <div class="row main-row">
+                    <div class="col-3 main-col category-col">
+                        @@include('components/_accordion-category.html')
+                    </div>
+                    <div class="col-9 main-col slider-col">
+                        @@include('components/_main-slider.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-features">
+            <div class="container-fluid">
+                <div class="row features-row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 features-col">
+                        <div class="features-item">
+                            <img src="img/dist/icons/features1.svg" alt="">
+                            <div class="features-item__info">
+                                <h4 class="features-title">НИЗКИЕ ЦЕНЫ</h4>
+                                <p class="features-text">Продажи из китая, размещаем заказы на проверенных заводах, минуя посредников</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 features-col">
+                        <div class="features-item">
+                            <img src="img/dist/icons/features2.svg" alt="">
+                            <div class="features-item__info">
+                                <h4 class="features-title">ГАРАНТИЯ КАЧЕСТВА</h4>
+                                <p class="features-text">Мы работаем с проверенными заводами и контролируем производственный процесс.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 features-col">
+                        <div class="features-item">
+                            <img src="img/dist/icons/features3.svg" alt="">
+                            <div class="features-item__info">
+                                <h4 class="features-title">БРЕНДИРОВАНИЕ</h4>
+                                <p class="features-text">Брендируем товары под требования покупателя, разрабатываем дизайн и упаковку</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 features-col">
+                        <div class="features-item">
+                            <img src="img/dist/icons/features4.svg" alt="">
+                            <div class="features-item__info">
+                                <h4 class="features-title">СОПРОВОЖДЕНИЕ</h4>
+                                <p class="features-text">Сопровождаем груз вплоть до места доставки, решение проблем берем на себя</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-categories">
+            <div class="container-fluid">
+                <div class="categories">
+                    @@include('components/_category-block.html')
+                </div>
+            </div>
+        </section>
+
+        @@include('components/_contact.html')
+        @@include('components/_footer.html')
+
+        @@include('components/_mobile-menu.html')
+        <div class="overlay"></div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <!-- <script src="lib/jQuery-1.12.4.min.js"></script> -->
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.languages {
+   margin: 0 40px;
+   display: flex;
+   align-items: center;
+}
+
+.lang {
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 22px;
+   text-transform: uppercase;
+   color: var(--section-grey, #999);
+   cursor: pointer;
+   transition: all 0.2s ease-out;
+}
+
+.languages span {
+   padding: 0 5px;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 22px;
+   color: var(--section-dark, #000);
+}
+
+.lang.active {
+   color: var(--section-black, #000);
+   transition: all 0.2s ease-out;
+}

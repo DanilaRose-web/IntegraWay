@@ -1,0 +1,15 @@
+.section-category {
+   padding: 21px 0 160px 0;
+}
+
+@media all and (max-width: 1060px) {
+   .section-category-col.accordion-col { flex: 0 0 30%; max-width: 30%; }
+   .section-category-col.products-col { flex: 0 0 70%; max-width: 70%; }
+}
+
+@media all and (max-width: 840px) {
+   .section-category { padding: 21px 0 100px 0; }
+   .section-category-col { max-width: 100%; flex: 0 0 100%; }
+   .section-category-col.accordion-col { order: 2; flex: 0 0 100%; max-width: 100%; }
+   .section-category-col.products-col { order: 1; flex: 0 0 100%; max-width: 100%; }
+}

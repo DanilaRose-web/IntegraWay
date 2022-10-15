@@ -1,0 +1,96 @@
+.select {
+   position: relative;
+   background: var(--section-white, #fff);
+   border: 1px solid var(--section-white, #fff);
+   border-radius: 8px;
+   transition: all 0.2s ease-out;
+}
+
+.select .current-select,
+.options .option span {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 36px;
+   letter-spacing: -0.4px;
+   color: var(--dark, #333);
+   width: 100%;
+   display: inline-block;
+   cursor: pointer;
+   transition: all 0.2s ease-out;
+}
+
+.select .current-select {
+   padding: 5px 15px;
+   width: 100%;
+   min-height: 40px;
+   display: flex;
+   align-items: center;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 36px;
+   letter-spacing: -0.4px;
+   color: var(--dark, #333);
+   position: relative;
+}
+
+.select .current-select::after {
+   content: '';
+   margin-top: -6px;
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   right: 15px;
+   top: 50%;
+   background: url('../img/dist/icons/icon-menu-arrow.svg') center no-repeat;
+   transition: all 0.2s ease-out;
+}
+
+.select .current-select.active::after {
+   transform: rotate(-180deg);
+}
+
+.options {
+   position: absolute;
+   left: 0;
+   top: 130%;
+   width: 100%;
+   border-radius: 8px;
+   background: var(--section-white, #fff);
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.02);
+   z-index: 2;
+   overflow: hidden;
+   height: 216px;
+   overflow-y: auto;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease-out;
+}
+
+.options.show {
+   top: 110%;
+   opacity: 1;
+   visibility: visible;
+   transition: all 0.3s ease-out;
+}
+
+.options .option span {
+   padding: 0 15px;
+}
+
+.options .options__1 .option span {
+   padding-left: 25px;
+}
+
+.options .options__2 .option span {
+   padding-left: 40px;
+}
+
+.options .option > span:hover {
+   background: rgba(187, 187, 187, 0.3);
+}
+
+.options span.selected, 
+.options span.selected:hover {
+   background: var(--section-blue, #02A0FC);
+   color: var(--section-white, #fff);
+}

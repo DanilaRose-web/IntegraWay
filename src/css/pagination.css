@@ -1,0 +1,88 @@
+.pagination {
+   margin-top: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.pagination li {
+   min-width: 50px;
+   height: 50px;
+   width: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: var(--section-grey7, #F6F6F6);
+   border-radius: 3px;
+   cursor: pointer;
+   transition: all 0.15s ease-out;
+}
+
+.pagination li:not(:last-child) {
+   margin-right: 8px;
+}
+
+.pagination li svg {
+   width: 13px;
+   height: 10px;
+   fill: var(--lighter-dark, #666);
+   transform: rotate(-90deg);
+   transition: all 0.15s ease-out;
+}
+
+.pagination li.prev svg {
+   transform: rotate(90deg);
+}
+
+.pagination li span {
+   font-weight: 400;
+   font-size: 22px;
+   line-height: 26px;
+   text-align: center;
+   color: var(--lighter-dark, #666);
+   transition: all 0.15s ease-out;
+}
+
+.pagination li:hover,
+.pagination li.active {
+   background: var(--section-blue, #02A0FC);
+}
+
+.pagination li:hover span,
+.pagination li.active span {
+   color: var(--section-white, #fff);
+}
+
+.pagination li:hover svg {
+   fill: var(--section-white, #fff);
+}
+
+
+.pagination li.disabled {
+   cursor: auto;
+}
+
+.pagination li.disabled span,
+.pagination li.disabled:hover span {
+   color: var(--light-grey, #BBB);
+}
+
+.pagination li.disabled svg,
+.pagination li.disabled:hover svg {
+   fill: var(--light-grey, #BBB);
+}
+
+.pagination li.disabled:hover {
+   background: var(--section-grey7, #F6F6F6);
+}
+
+
+
+
+@media all and (max-width: 840px) {
+   .pagination { margin-bottom: 40px; }
+}
+
+@media all and (max-width: 380px) {
+   .pagination li { min-width: 40px; width: 40px; height: 40px; }
+}

@@ -1,0 +1,223 @@
+.category-head {
+   margin-bottom: 30px;
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+a.see-all {
+   position: relative;
+   display: inline-block;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+   white-space: nowrap;
+   color: var(--dark, #333333);
+   opacity: 0.67;
+   transition: all 0.2s ease-out;
+}
+
+
+
+
+
+
+
+/* описание блока с картами */
+.category-col {
+   margin-bottom: 30px;
+   display: flex;
+}
+
+.card-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: #FEFEFE;
+   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.02);
+   border-radius: 8px;
+   width: 100%;
+   position: relative;
+   transition: all 0.2s ease-out;
+}
+
+.card-item .hidden-block {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   visibility: hidden;
+   opacity: 0;
+   background: var(--section-blue, #02A0FC);
+   border-radius: 8px;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.2s ease-out;
+}
+
+.hidden-block .hidden-btn {
+   transform: translateY(20px);
+}
+
+.card-item:hover {
+   /* box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15); */
+}
+
+.card-item:hover .hidden-block {
+   background: rgba(2, 160, 252, 0.5);
+   opacity: 1;
+   visibility: visible;
+}
+
+.card-item:hover .hidden-block .hidden-btn {
+   transform: translateY(0);
+}
+
+.card-item .img {
+   padding: 10px;
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+   display: flex;
+   /* min-height: 235px; */
+   min-height: max-content;
+   overflow: hidden;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-item .img img {
+   max-width: 100%;
+   display: inline-block;
+   height: auto;
+   transform: scale(1);
+   transition: all 0.4s ease-out;
+}
+
+.card-item:hover .img img {
+   /* transform: scale(1.05); */
+}
+
+.card-title {
+   padding: 19px 10px 19px 16px;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 110%;
+   color: var(--section-dark, #333333);
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   width: 100%;
+}
+
+.card-title.small-card-title {
+   font-size: 16px;
+}
+
+
+
+
+/* стилизация slick slider */
+.cards-slider .slick-list,
+.cards-slider .slick-track,
+.cards-slider .slick-slide,
+.cards-slider .slick-slide > div {
+   display: flex;
+}
+
+
+
+
+/* слайдер рекомендации/похожие товары */
+.other-cards {
+   padding: 60px 0 100px 0;
+}
+
+.other-cards-slider .slick-list,
+.other-cards-slider .slick-track,
+.other-cards-slider .slick-slide,
+.other-cards-slider .slick-slide > div {
+   display: flex;
+}
+
+.other-cards-slider .slick-slide {
+   max-width: 292px;
+   min-width: 292px;
+}
+
+.other-col {
+   margin-bottom: 30px;
+   max-width: 100%;
+   display: flex;
+   flex: 0 0 100%;
+}
+
+.other-col .card-item {
+   height: 100%;
+}
+
+
+
+
+
+@media all and (max-width: 575px) {
+   .card-item { height: 100%; }
+}
+
+
+
+
+
+
+
+
+
+
+.card {
+   position: relative;
+   width: 300px;
+   height: 400px;
+   transform-style: preserve-3d;
+}
+
+.card .face {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   backface-visibility: hidden;
+   transition: all 0.8s ease-out;
+   transform: perspective(500px) rotate(0deg);
+}
+
+.card .face h4 {
+   font-size: 4em;
+   text-transform: uppercase;
+   transform: perspective(500px) translateZ(50px);
+}
+
+.card .face.front {
+   background: #ff0;
+}
+
+.card:hover .face.front {
+   transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+   background: #3bc2ff;
+   color: #fff;
+   transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back {
+   transform: perspective(500px) rotateY(360deg);
+}

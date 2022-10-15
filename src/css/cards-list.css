@@ -1,0 +1,23 @@
+.cards-col {
+   display: flex;
+   margin-bottom: 30px;
+}
+
+@media all and (max-width: 840px) {
+   .cards-col { max-width: 33.3333%; flex: 0 0 33.3333%; }
+}
+
+@media all and (max-width: 740px) {
+   .cards-col { max-width: 50%; flex: 0 0 50%; }
+}
+
+@media all and (max-width: 500px) {
+   .cards-row { margin: 0 -10px; }
+   .cards-col { margin-bottom: 20px; padding: 0 10px; }
+   .card-title.media500 { padding: 15px 10px 15px 10px; font-size: calc((100vw - 280px)/(500 - 280) * (20 - 16) + 16px); }
+}
+
+@media all and (max-width: 320px) {
+   .cards-col { max-width: 100%; flex: 0 0 100%; }
+   .card-title.media500 { font-size: 16px; }
+}

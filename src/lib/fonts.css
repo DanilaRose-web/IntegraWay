@@ -1,0 +1,30 @@
+/* Futura New */
+@font-face {
+    font-family: 'Futura New';
+    src: local('../fonts/Futura New Book Reg'), local('Futura-New-Book-Reg'),
+        url('../fonts/FuturaNewBook-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewBook-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewBook-Reg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('../fonts/Futura New Demi Reg'), local('Futura-New-Demi-Reg'),
+        url('../fonts/FuturaNewDemi-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewDemi-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewDemi-Reg.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('../fonts/Futura New Bold Reg'), local('Futura-New-Bold-Reg'),
+        url('../fonts/FuturaNewBold-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewBold-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewBold-Reg.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
